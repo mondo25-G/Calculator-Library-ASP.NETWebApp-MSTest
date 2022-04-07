@@ -11,26 +11,6 @@ namespace Calculator.Web
     //TODO: Maybe add some css to page.
     public partial class CalculatorPage : System.Web.UI.Page
     {
-        protected void OnMouseLeave(EventArgs e)
-        {
-            int x = 0;
-            int y = 0;            
-            string error = String.Empty;
-            try
-            {
-                checked
-                {
-                    x = Convert.ToInt32(txtFirstNumber.Text);
-                    y = Convert.ToInt32(txtSecondNumber.Text);
-                }
-            }
-            catch (Exception ex) when (ex is OverflowException || ex is FormatException)
-            {
-                lblErrorMessage.Text = ex.Message;
-                txtFirstNumber.Text = "0";
-                txtSecondNumber.Text = "0";
-            }
-        }
         protected void Btn_Click(object sender, CommandEventArgs e)
         {
             int x = Convert.ToInt32(txtFirstNumber.Text);
