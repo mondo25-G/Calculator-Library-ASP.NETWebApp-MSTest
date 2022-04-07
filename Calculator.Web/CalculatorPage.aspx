@@ -8,9 +8,7 @@
         void Page_Load(Object sender, EventArgs e)
         {
             // Manually register the event-handling method for the Command  
-            // event of the Button controls.
-            txtFirstNumber.Text = "0";
-            txtSecondNumber.Text = "0";
+            // event of the Button controls.           
             btnAdd.Command += new CommandEventHandler(this.Btn_Click);
             btnSubtract.Command += new CommandEventHandler(this.Btn_Click);
             btnMultiply.Command += new CommandEventHandler(this.Btn_Click);

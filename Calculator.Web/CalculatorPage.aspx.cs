@@ -13,6 +13,15 @@ namespace Calculator.Web
     {
         protected void Btn_Click(object sender, CommandEventArgs e)
         {
+            //catch button click with no input at all.
+            if (txtFirstNumber.Text=="")
+            {
+                txtFirstNumber.Text = "0";
+            }
+            if (txtSecondNumber.Text == "")
+            {
+                txtSecondNumber.Text = "0";
+            }
             int x = Convert.ToInt32(txtFirstNumber.Text);
             int y = Convert.ToInt32(txtSecondNumber.Text);
             int result = 0;
